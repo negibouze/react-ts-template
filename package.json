@@ -6,7 +6,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "elint": "eslint --ext .ts,.tsx --ignore-path .gitignore .",
+    "elint:fix": "eslint --fix --ext ts,tsx --ignore-path .gitignore ."
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -29,6 +31,7 @@
     }
   },
   "lint-staged": {
+    "src/**/*.ts(x)?": "eslint",
     "src/**/*.{json,md}": [
       "prettier --write"
     ]
@@ -47,6 +50,12 @@
     "typescript": "^3.7.5"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.21.0",
+    "@typescript-eslint/parser": "^2.21.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.18.3",
     "husky": "^4.2.3",
     "lint-staged": "^10.0.8",
     "prettier": "^1.19.1"
