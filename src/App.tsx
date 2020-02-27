@@ -1,5 +1,6 @@
 import React from 'react';
-import './App.css';
+import './styles/reset.css';
+import './styles/base.css';
 
 function App() {
   return <div className="App">Hello, World!</div>;
